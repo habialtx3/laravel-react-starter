@@ -5,22 +5,15 @@ import AssetsPage from "../pages/AssetPage";
 
 export const router = createBrowserRouter([
     {
-        path: '/login',
-        element: <LoginPage />
-    }
-    ,
-    {
-        path: '/login',
-        element: <LoginPage />
-    }
-    ,{
-        path: '/',
-        element: (<HalamanHome />)
-    }
-    ,{
-        path: '/asset',
-        element: <AssetsPage />
-    }
-    ,
-
+    path: '/login',
+    element: <LoginPage />
+  },
+  {
+    path: '/',
+    element: <HalamanHome />
+  },
+  {
+    path: '/asset',
+    element: <AssetsPage />
+  }
 ])

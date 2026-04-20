@@ -1,6 +1,6 @@
 
 export default function HalamanHome() {
   return (
-    <div>Ini halaman home</div>
+    <h1>asjdklasdjasdjklasjdklasjdkl</h1>
   )
 }
