@@ -9,7 +9,7 @@ export function getAssets() {
     return api<Asset[]>("/assets");
 }
 
-export function createAssets(data: { name: string }) {
+export function createAssets(data: { name: string; code: string; qty: number }) {
     return api("/assets", {
         method: "POST",
         body: JSON.stringify(data),

@@ -20,7 +20,7 @@ class AssetController extends Controller
      */
     public function index()
     {
-        $assets = Asset::orderBy('id')->paginate(2);
+        $assets = Asset::orderBy('id')->paginate(10);
 
         return response()->json([
             'data' => $assets->items(),
