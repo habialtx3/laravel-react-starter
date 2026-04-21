@@ -23,17 +23,21 @@ Route::middleware(['auth:sanctum'])->group(function () {
     // Route::get('/assets', [AssetController::class, 'index'])
     //     ->middleware('permission:asset.read');
 
-    Route::get('/assets/{asset}', [AssetController::class, 'show'])
-        ->middleware('permission:asset.read');
+    // Route::get('/assets/{asset}', [AssetController::class, 'show'])
+    //     ->middleware('permission:asset.read');
 
-    Route::post('/assets', [AssetController::class, 'store'])
-        ->middleware('permission:asset.create');
+    // Route::post('/assets', [AssetController::class, 'store'])
+    //     ->middleware('permission:asset.create');
 
-    Route::put('/assets/{asset}', [AssetController::class, 'update'])
-        ->middleware('permission:asset.update');
+    // Route::put('/assets/{asset}', [AssetController::class, 'update'])
+    //     ->middleware('permission:asset.update');
 
-    Route::delete('/assets/{asset}', [AssetController::class, 'destroy'])
-        ->middleware('permission:asset.delete');
+    // Route::delete('/assets/{asset}', [AssetController::class, 'destroy'])
+    //     ->middleware('permission:asset.delete');
 });
 
 Route::get('/assets', [AssetController::class, 'index']);
+Route::post('/assets', [AssetController::class, 'store']);
+Route::put('/assets/{asset}', [AssetController::class, 'update']);
+Route::delete('/assets/{asset}', [AssetController::class, 'destroy']);
+Route::get('/assets/{asset}', [AssetController::class, 'show']);

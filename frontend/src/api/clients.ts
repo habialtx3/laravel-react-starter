@@ -5,7 +5,7 @@ export async function api<T>(endpoints: string, options?: RequestInit): Promise<
         headers: {
             "Content-Type": "application/json",
         },
-        credentials: "include",
+        // credentials: "include",
         ...options
     })
 

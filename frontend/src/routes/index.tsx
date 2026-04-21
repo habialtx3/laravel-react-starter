@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
     element: <HalamanHome />
   },
   {
-    path: '/asset',
+    path: '/assets',
     element: <AssetsPage />
   }
 ])
