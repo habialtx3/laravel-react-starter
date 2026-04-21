@@ -2,11 +2,14 @@
 import { useState } from "react";
 import { useAssets } from "../../hooks/useAssets";
 import { useCreateAsset } from "../../hooks/useCreateAssets";
+import { useDeleteAsset } from "../../hooks/useDeleteAssets";
 
 export default function AssetsPage() {
 
   const { data, isLoading } = useAssets()
   const { mutate } = useCreateAsset()
+  const { mutate: deleteMutate, isPending: isDeleting } = useDeleteAsset()
+
 
   const [name, setName] = useState('')
   const [code, setCode] = useState('')
@@ -33,7 +36,10 @@ export default function AssetsPage() {
         </div>
         <ul>
           {data?.data?.map((asset) => (
-            <li key={asset.id}>{asset.name}</li>
+            <li key={asset.id}>
+              {asset.name}
+              <button onClick={()=> deleteMutate(asset.id)} disabled={isDeleting}>Delete</button>
+            </li>
           ))}
         </ul>
       </div>

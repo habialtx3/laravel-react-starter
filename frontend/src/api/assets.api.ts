@@ -16,8 +16,8 @@ export function createAssets(data: { name: string; code: string; qty: number }) 
     })
 }
 
-export function deleteAsset(id: number) {
-    return api(`/assets/${id}`, {
-        method: "DELETE",
-    });
+export function deleteAsset(id : number) {
+    return api(`/assets/${id}`,{
+        method : "DELETE",
+    })
 }
